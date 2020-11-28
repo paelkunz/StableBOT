@@ -2712,6 +2712,16 @@ Menunggu video...`
         case '#snk':
             tobz.reply(from, snk, id)
             break
+        case '#broadcast':
+            if (!isOwner) return client.reply(from, 'Perintah ini hanya untuk Owner bot!', id)
+            let msg = body.slice(4)
+            const chatz = await client.getAllChatIds()
+            for (let ids of chatz) {
+                var cvk = await client.getChatById(ids)
+                if (!cvk.isReadOnly) await client.sendText(ids, `[ StableBOT Broadcast ]\n\n${msg}`)
+            }
+            client.reply(from, 'Broadcast Success!', id)
+            break
         default:
             if (!isGroupMsg) return tobz.reply(from, 'Jika Ingin Menggunakan Bot Harap Masuk Ke Dalam Grup StableBOT, Link Ada Di Bio atau Bisa Mengetik #elainagroup!\nJika Ingin Sewa Bot atau Bikin Bot Harap Ketik *#iklan*', id)
             if (command.startsWith('#')) {
