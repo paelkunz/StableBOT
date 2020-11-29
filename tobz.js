@@ -2203,6 +2203,7 @@ Menunggu video...`
             break
         // ADMIN & OWNER
         case '#bc':
+        case '#broadcast':
             if (!isOwner) return tobz.reply(from, 'Perintah ini hanya untuk Owner StableBOT!', id)
             let msg = body.slice(4)
             const chatz = await tobz.getAllChatIds()
@@ -2524,7 +2525,7 @@ Menunggu video...`
                 fs.writeFileSync('./lib/database/admin.json', JSON.stringify(adminNumber))
                 tobz.reply(from, 'Success Menghapus Admin StableBOT!', id)
             break
-        case '#block':
+        case '#ubl':
             if (!isOwner) return tobz.reply(from, 'Perintah ini hanya bisa di gunakan oleh Owner StableBOT!', id)
             for (let i = 0; i < mentionedJidList.length; i++) {
                 let unblock = `${mentionedJidList[i]}`
