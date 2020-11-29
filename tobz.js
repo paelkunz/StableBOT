@@ -496,6 +496,25 @@ module.exports = tobz = async (tobz, message) => {
                 {
                     console.log(error)
                 }
+            break
+         case '#ttg':
+            if(isReg(obj)) return
+            if(cekumur(cekage)) return
+            if (!isGroupMsg) return tobz.reply(from, `Perintah ini hanya bisa di gunakan dalam group!`, id)
+            if (isLimit(serial)) return tobz.reply(from, `Maaf ${pushname}, Kuota Limit Kamu Sudah Habis, Ketik #limit Untuk Mengecek Kuota Limit Kamu`, id)
+            try {
+                if (quotedMsgObj == null) {
+                    if (args.length === 1) return tobz.reply(from, `Kirim perintah *#ttg [ Teks ]*, contoh *#ttg aku bukan boneka*`, id)
+                        await tobz.sendStickerfromUrl(from, `https://api.vhtear.com/textxgif?text=${body.slice(5)}&apikey=${vhtearkey}`)
+                        limitAdd(serial)
+                } else {
+                    await tobz.sendStickerfromUrl(from, `https://api.vhtear.com/textxgif?text=${quotedMsgObj}&apikey=${vhtearkey}`)
+                    limitAdd(serial)
+                }
+            } catch(e) {
+                console.log(e)
+                tobz.reply(from, 'Maaf, Server sedang Error')
+            }
             break;
         case '#stickergif':
         case '#stikergif':
