@@ -74,7 +74,7 @@ const start = async (tobz = new Client()) => {
                 const groups = await tobz.getAllGroups()
                 // BOT group count less than
                 if(groups.length > groupLimit){
-                    await tobz.sendText(chat.id, 'Maaf, Batas group yang dapat StableBOT tampung sudah penuh').then(async () =>{
+                    await tobz.sendText(chat.id, 'Maaf, Owner/Admin Group ini Belum membeli akses untuk menambahkan bot ke grup ini. Contact wa.me/621213082150 untuk melihat daftar harga.').then(async () =>{
                         tobz.deleteChat(chat.id)
                         tobz.leaveGroup(chat.id)
                     })
