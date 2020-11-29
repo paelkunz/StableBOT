@@ -878,7 +878,7 @@ ${desc}`)
             if (isLimit(serial)) return tobz.reply(from, `Maaf ${pushname}, Kuota Limit Kamu Sudah Habis, Ketik #limit Untuk Mengecek Kuota Limit Kamu`, id)
             
             await limitAdd(serial)
-            const trapnime = await axios.get('https://mhankbarbar.herokuapp.com/api/random/trap')
+            const trapnime = await axios.get('https://mhankbarbar.herokuapp.com/api/random/hentai?apiKey=Q9Xhtro7FA17Qb2MfPqV')
             const trapn = trapnime.data
             if (trapn.result.endsWith('.png')) {
                 var ext = '.png'
@@ -893,7 +893,7 @@ ${desc}`)
             if (isLimit(serial)) return tobz.reply(from, `Maaf ${pushname}, Kuota Limit Kamu Sudah Habis, Ketik #limit Untuk Mengecek Kuota Limit Kamu`, id)
             
             await limitAdd(serial)
-            const hentai = await axios.get('https://mhankbarbar.herokuapp.com/api/random/hentai')
+            const hentai = await axios.get('https://mhankbarbar.herokuapp.com/api/random/hentai?apiKey=Q9Xhtro7FA17Qb2MfPqV')
             const henta = hentai.data
             if (henta.result.endsWith('.png')) {
                 var ext = '.png'
