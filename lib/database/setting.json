@@ -7,7 +7,7 @@
   "prefix": "#",
   "owner": "6281213082150@c.us",
   "mtc": false,
-  "restartState": false,
+  "restartState": true,
   "restartId": "undefined",
   "banChats": false,
   "Rest": true
