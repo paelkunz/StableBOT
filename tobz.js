@@ -2549,15 +2549,15 @@ Menunggu video...`
                 for (let i = 0; i < mentionedJidList.length; i++) {
                 banned.push(mentionedJidList[i])
                 fs.writeFileSync('./lib/database/banned.json', JSON.stringify(banned))
-                tobz.reply(from, 'Succes ban target!',id)
+                tobz.reply(from, 'User was banned Succeessfully!!',id)
             }
             break
-        case '#unban':
+        case '#uba':
             if (!isAdmin) return tobz.reply(from, 'Perintah ini hanya bisa di gunakan oleh admin StableBOT!', id)
                 let inz = banned.indexOf(mentionedJidList[0])
                 banned.splice(inz, 1)
                 fs.writeFileSync('./lib/database/banned.json', JSON.stringify(banned))
-                tobz.reply(from, 'Unbanned User!', id)
+                tobz.reply(from, 'Unbanned Successfuly!!', id)
             break
         case '#listgroup':
                 tobz.getAllGroups().then((res) => {
