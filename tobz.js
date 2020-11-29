@@ -660,7 +660,7 @@ ${desc}`)
         // ON OFF
         case '#nsfw':
             if (!isGroupMsg) return tobz.reply(from, 'Perintah ini hanya bisa di gunakan dalam group!', id)
-            if (!isGroupAdmins) return tobz.reply(from, 'Perintah ini hanya bisa di gunakan oleh Admin group!', id)
+            if (!isOwner) return tobz.reply(from, 'Maaf, perintah ini hanya dapat dilakukan oleh Owner StableBOT! Contact owner di wa.me/6281213082150 untuk mengaktifkan NSFW.', id)
             if (args.length === 1) return tobz.reply(from, 'Pilih enable atau disable!', id)
             if (args[1].toLowerCase() === 'enable') {
                 nsfw_.push(chat.id)
