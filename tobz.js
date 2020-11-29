@@ -908,7 +908,7 @@ ${desc}`)
             if (isLimit(serial)) return tobz.reply(from, `Maaf ${pushname}, Kuota Limit Kamu Sudah Habis, Ketik #limit Untuk Mengecek Kuota Limit Kamu`, id)
             
             await limitAdd(serial)
-            const nsfwneko = await axios.get('https://mhankbarbar.herokuapp.com/api/random/nsfwneko')
+            const nsfwneko = await axios.get('https://mhankbarbar.herokuapp.com/api/random/hentai?apiKey=Q9Xhtro7FA17Qb2MfPqV')
             const nsfwn = nsfwneko.data
             if (nsfwn.result.endsWith('.png')) {
                 var ext = '.png'
