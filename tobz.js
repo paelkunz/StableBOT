@@ -2641,6 +2641,26 @@ Menunggu video...`
              }
             }
             break
+        case '#sider':
+            if (!isOwner) return tobz.reply(from, 'Perintah ini hanya bisa di gunakan oleh Owner StableBOT!', id)
+            if(isreg(obj))return
+            if(cekumur(cekage))return
+            if(!isGroupMsg) return tobz.reply(from, 'Hanya untuk di dalam group')
+            if(!quotedMsg) return tobz.reply(from,'Tolong reply pesan Stable')
+            if(!quotedMsgObj) return tobz.reply(from,'Tolong reply pesan Stable')
+            try{
+                const reader = await tobz.getMessageReaders(quotedMsgObj.id)
+                Let list = ''
+                for (Let pembaca of reader){
+                    list +=`- @${pembaca.id.replace(/@c.us/g,'')}`
+                }
+                tobz.sendTextWithMentions(from, `Ngapain ngeread doang lu? hehe...\n${list}`)
+            } catch(err) {
+                console.log(err)
+                tobz.reply(from,'Maaf, Belum ada yang membaca pesan Stable')
+            }
+            
+            break
         // LIST MENU
         case '#menu':
         case '#help':
