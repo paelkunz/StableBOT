@@ -31,9 +31,8 @@ ownerNumber = "6213xxxxxx@c.us"
 
 If you find some bugs please contact the WhatsApp number on Contact
 
-- [TELEGRAM](https://t.me/tobz2k19)
-- [WHATSAPP](https://wa.me/6281311850715)
-- [MY BOT](wa.me/447418349954)
+- [TELEGRAM](https://t.me/paelkunz)
+- [WHATSAPP](https://wa.me/6281213082150)
 - [WHATSAPP GROUP](https://chat.whatsapp.com/InZrGpgBBNB4hnS7Q6sVJG)
 
 ## APIKEY
